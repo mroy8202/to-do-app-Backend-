@@ -20,9 +20,12 @@ app.listen(PORT, () => {
 
 // connect to the database
 const dbConnect = require('./config/database');
+const { createTodo } = require('./controllers/createTodo');
 dbConnect();
 
 // default Route
 app.get('/', (req, res) => {
-    res.send(`<h1>This is Homepage.</h1>`)
+    res.send(`<h1>This is a Homepage.</h1>`)
 })
+
+
